@@ -180,10 +180,11 @@ public class IntegerSet {
         return return_string;
     }
 }
-    /**
-     * An exception class used to notify the user uses the smallest or largest methods
-     * on a empty IntegerSet.
-     */
+
+/**
+* An exception class used to notify the user uses the smallest or largest methods
+* on a empty IntegerSet.
+*/
 class IntegerSetException extends Exception
 {
     public IntegerSetException(String message)
