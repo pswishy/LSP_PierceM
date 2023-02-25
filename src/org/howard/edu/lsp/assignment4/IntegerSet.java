@@ -2,8 +2,15 @@ package src.org.howard.edu.lsp.assignment4;
 
 import java.util.*;
 
+/**
+ * IntegerSet class which replicates Mathematical Set Operation in Java
+ * @author Pierce Medy
+ */
 
 public class IntegerSet {
+    /**
+     * The List obeject containg all the values in our IntegerSet
+     */
     private List<Integer> set = new ArrayList<Integer>();
 
     public IntegerSet(){
