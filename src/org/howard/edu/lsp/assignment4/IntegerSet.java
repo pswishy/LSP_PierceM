@@ -1,3 +1,5 @@
+package src.org.howard.edu.lsp.assignment4;
+
 import java.util.*;
 
 
@@ -56,4 +58,55 @@ public class IntegerSet {
         return false;
     }
 
+    public int largest() throws IntegerSetException{
+         Integer largest_num = Integer.MIN_VALUE;
+
+        if(set.size() == 0){
+            throw new IntegerSetException("IntegerSet is empty");
+        }
+        
+        for (int i : set){
+            if (i > largest_num){
+                largest_num = i;
+            }
+        }
+        return largest_num;
+    }
+
+    public int smallest() throws IntegerSetException{
+        Integer smallest_num = Integer.MAX_VALUE;
+
+       if(set.size() == 0){
+           throw new IntegerSetException("IntegerSet is empty");
+       }
+       
+       for (int i : set){
+           if (i < smallest_num){
+            smallest_num = i;
+           }
+       }
+       return smallest_num;
+   }
+
+   public void add(int item){
+
+    if(!set.contains(item)){
+        set.add(item);
+    }
+   }
+
+   public void remove(int item){
+    if(set.contains(item)){
+        set.remove(item);
+    }
+   }
+
+}
+
+class IntegerSetException extends Exception
+{
+    public IntegerSetException(String message)
+    {
+        super(message);
+    }
 }
