@@ -1,7 +1,6 @@
 package src.org.howard.edu.lsp.assignment4;
 
 import java.util.*;
-//import static org.junit.Assert;
 
 public class Driver{
 	public static void main(String[] args) throws IntegerSetException {
@@ -28,9 +27,20 @@ public class Driver{
         set2.add(2);
         set2.add(1);
         System.out.println("Is Set 1 equal to Set 2: " + set1.equals(set2));
+        System.out.println("The difference between Set 1 and Set 2 is: " + set1.diff(set2));
+
+        set1.intersection(set2);
+        System.out.println("Result of Set 1 Intersection With Set 2: " + set1.toString());
 
         set1.union(set2);
         System.out.println("Result of Set 1 Union With Set 2: " + set1.toString());
+        
+        // Set Removing & Clearing
+        set1.remove(4);
+        System.out.println("Result of removing 4 from set 1: " + set1.toString());
+
+        set1.clear();
+        System.out.println("Check if Set 1 was successfully cleared by using isEmpty(): " + set1.isEmpty());
 
 
     }

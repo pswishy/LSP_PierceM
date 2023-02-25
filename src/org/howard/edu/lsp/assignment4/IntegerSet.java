@@ -80,7 +80,7 @@ public class IntegerSet {
 
    public void remove(int item){
     if(set.contains(item)){
-        set.remove(item);
+        set.remove(set.indexOf(item));
     }
    }
 
@@ -94,11 +94,15 @@ public class IntegerSet {
 
 
    public void intersection(IntegerSet b){
-    for(int i : b.set){
-        if(!set.contains(i)){
+    System.out.println("functionc called");
+    // should become set with same items
+    for(int i : set){
+        if(!b.set.contains(i)){
             set.remove(i);
         }
     }
+   
+
    }
 
    public int diff(IntegerSet b){
