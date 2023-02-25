@@ -24,6 +24,8 @@ public class Driver{
         set2.add(3);
         set2.add(2);
         set2.add(1);
+        System.out.println("Value of Set 2 is: " + set2.toString());
+
         System.out.println("Is Set 1 equal to Set 2: " + set1.equals(set2));
         System.out.println("The difference between Set 1 and Set 2 is: " + set1.diff(set2));
 

@@ -133,8 +133,6 @@ public class IntegerSet {
      * @param b IntegerSet that is being combined
      */
    public void intersection(IntegerSet b){
-    System.out.println("functionc called");
-    // should become set with same items
     for(int i : set){
         if(!b.set.contains(i)){
             set.remove(i);
