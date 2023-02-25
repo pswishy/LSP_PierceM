@@ -1,4 +1,3 @@
-package src.org.howard.edu.lsp.assignment4;
 
 import java.util.*;
 
@@ -101,6 +100,49 @@ public class IntegerSet {
     }
    }
 
+   public void union(IntegerSet b){
+    for(int i : b.set){
+        if(!set.contains(i)){
+            set.add(i);
+        }
+    }
+   }
+
+
+   public void intersection(IntegerSet b){
+    for(int i : b.set){
+        if(!set.contains(i)){
+            set.remove(i);
+        }
+    }
+   }
+
+   public int diff(IntegerSet b){
+    int set1_size = 0;
+    int set2_size = 0;
+    for(int i: set){
+        set1_size += i;
+        }
+    for(int i: b.set){
+        set2_size += i;
+        }
+
+    return set1_size - set2_size;
+   }
+
+    boolean isEmpty(){
+        return set.isEmpty();
+    }
+
+    public String toString(){
+        String return_string = "";
+
+        for(int i: set){
+            return_string += String.valueOf(i) + " ";
+        }
+
+        return return_string;
+    }
 }
 
 class IntegerSetException extends Exception
