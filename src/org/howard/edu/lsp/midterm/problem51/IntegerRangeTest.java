@@ -17,7 +17,6 @@ public class IntegerRangeTest {
     assertTrue(range1.contains(5));
     assertTrue(range2.contains(5));
     assertFalse(range2.contains(-5));
-
     }
 
     @Test
