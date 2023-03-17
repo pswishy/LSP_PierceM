@@ -27,7 +27,6 @@ public class IntegerRangeTest {
         IntegerRange range3 = new IntegerRange(-10,-1);
         IntegerRange range4 = new IntegerRange(0,0);
         IntegerRange range5 = new IntegerRange(-1,-10);
-
         assertTrue(range1.overlaps(range2));
         assertFalse(range1.overlaps(range3));
         assertFalse(range2.overlaps(range3));
